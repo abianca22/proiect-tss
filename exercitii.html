@@ -12,14 +12,20 @@
         <div id="pb1">
             <h2>Problema 1</h2>
             <p>La o fabrică de confecții, pentru a produce 
-            <input type="number" id="nr-bluze1" size="2"/> bluze și 
-            <input type="number" id="nr-rochii1" size="2" /> rochii s-au folosit
+            <input type="number" id="nr-bluze1" size="2" onkeydown="return event.keyCode !== 110 && event.keyCode !== 108 && event.keyCode !== 188 && event.keyCode !== 190"/> bluze și 
+            <input type="number" id="nr-rochii1" size="2" onkeydown="return event.keyCode !== 110 && event.keyCode !== 108 && event.keyCode !== 188 && event.keyCode !== 190"/> rochii s-au folosit
             <input type="number" id="nr-metri1" size="2" /> m de material, iar pentru a produce 
-            <input type="number" id="nr-bluze2" size="2" /> bluze și 
-            <input type="number" id="nr-rochii2" size="2" /> rochii s-au folosit 
+            <input type="number" id="nr-bluze2" size="2" onkeydown="return event.keyCode !== 110 && event.keyCode !== 108 && event.keyCode !== 188 && event.keyCode !== 190"/> bluze și 
+            <input type="number" id="nr-rochii2" size="2" onkeydown="return event.keyCode !== 110 && event.keyCode !== 108 && event.keyCode !== 188 && event.keyCode !== 190"/> rochii s-au folosit 
             <input type="number" id="nr-metri2" size="2" /> m de material. Câți metri de material s-au folosit pentru a confecționa o rochie?</p>
             <label for="rasp-pb1">Raspuns:</label>
             <input type="number" id="rasp-pb1" size="2"/>
+            <h5>Restrictii:<br></h5>
+            <ol>
+                <li>Numarul de rochii si numarul de bluze trebuie sa fie numar natural nenul.</li>
+                <li>Numarul de metri de material trebuie sa fie un numar real pozitiv.</li>
+                <li>Produsul dintre primul set de bluze si al doilea set de rochii trebuie sa fie diferit de produsul dintre al doilea set de bluze si primul set de rochii.</li>
+            </ol>
             <button id="trimite">Trimite</button>
             <br><br>
             <button id="rasp-corect">Vezi raspuns</button>

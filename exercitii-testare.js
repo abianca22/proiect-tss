@@ -10,8 +10,9 @@ class Ex1{
         var nr_tot2 = p6*p1
         var nr_r = nr_r1-nr_r2
         var metri_rochii = nr_tot1-nr_tot2
-        if(nr_r === 0) {
-            rezultat = "input invalid - impartire la 0";
+        if (p1 < 1 || p2 < 1 || p3 < 0 || p4 < 1 || p5 < 1 || p6 < 0 || nr_r === 0 || nr_r * metri_rochii < 0)
+        {
+            rezultat = "input invalid";
         }
         else {
             var rezultat=metri_rochii/nr_r;
@@ -21,16 +22,20 @@ class Ex1{
 
 
     verificare(param) {
-        let inp1 = parseFloat(document.getElementById("nr-bluze1").value);
-        let inp2 = parseFloat(document.getElementById("nr-rochii1").value);
+        let inp1 = parseInt(document.getElementById("nr-bluze1").value);
+        let inp2 = parseInt(document.getElementById("nr-rochii1").value);
         let inp3 = parseFloat(document.getElementById("nr-metri1").value);
-        let inp4 = parseFloat(document.getElementById("nr-bluze2").value);
-        let inp5 = parseFloat(document.getElementById("nr-rochii2").value);
+        let inp4 = parseInt(document.getElementById("nr-bluze2").value);
+        let inp5 = parseInt(document.getElementById("nr-rochii2").value);
         let inp6 = parseFloat(document.getElementById("nr-metri2").value);
-        let inp7 = parseFloat(document.getElementById("rasp-pb1").value);
+
+        let rasp_corect = this.rezolvare(inp1, inp2, inp3, inp4, inp5, inp6);
      
-        if (param === this.rezolvare(inp1, inp2, inp3, inp4, inp5, inp6)) {
+        if (param === rasp_corect) {
             alert("Raspuns corect!");
+        }
+        else if (param === "input invalid") {
+            alert("Date invalide! Recititi restrictiile.");
         }
         else {
             alert("Raspuns gresit! Mai incearca :)");
@@ -69,7 +74,6 @@ class Ex1{
     }
     
 }
-
 
 module.exports = Ex1;
  
