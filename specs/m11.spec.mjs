@@ -1,25 +1,23 @@
-import Ex1 from "../exercitii-testare.js";
+import Ex1 from "../mutanti/mutant11.js";
 import { expect } from "chai";
 var myObj = new Ex1();
 
-describe("Testare functionala" , function (){
+describe("Testare functionala - Mutant11" , function (){
     // am pus cateva exemple din fiecare clasa, sunt mult mai multe teste
     
     it("Respecta toate constrangerile", function(){
         expect(myObj.rezolvare(5, 6, 20, 4, 5, 17)).to.be.equal(5);
         expect(myObj.rezolvare(5, 6, 20.5, 4, 5, 17.8)).to.be.equal(7);
         expect(myObj.rezolvare(5, 6, 20.3, 4, 5, 17.8)).to.be.equal(7.8);        
-        expect(myObj.rezolvare(1, 5, 10, 15, 2, 30)).to.be.equal(1.64);    // test adaugat pentru omorarea mutantului 2  
     });
 
     it("Afiseaza \"input invalid\" (impartire la zero)", function() {
         expect(myObj.rezolvare(1, 1, 1, 1, 1, 1)).to.be.equal("input invalid");
     });
 
-    it("Afiseaza \"input invalid\" (parametri negativi/nuli)", function() {
+    it("Afiseaza \"input invalid\" (parametri negativi)", function() {
         expect(myObj.rezolvare(-1, -2, -3, -8, -7, -6)).to.be.equal("input invalid");
         expect(myObj.rezolvare(-1, 2, -3, 8, -7, 6)).to.be.equal("input invalid");
-        expect(myObj.rezolvare(5, 7, 20.3, 4, 5, 0)).to.be.equal("input invalid");   // test adaugat pentru omorarea mutantului 3     
     });
 
     it("Afiseaza \"input invalid\" (rezultat negativ)", function() {
@@ -34,7 +32,7 @@ describe("Testare functionala" , function (){
 
 });
 
-describe("Testare structurala", function() {
+describe("Testare structurala - Mutant11", function() {
     
     // acoperire la nivel de instructiune
     

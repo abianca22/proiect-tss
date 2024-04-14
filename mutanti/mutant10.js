@@ -10,7 +10,8 @@ class Ex1{
         var nr_tot2 = p6*p1
         var nr_r = nr_r1-nr_r2
         var metri_rochii = nr_tot1-nr_tot2
-        if (p1 < 1 || p2 < 1 || p3 <= 0 || p4 < 1 || p5 < 1 || p6 <= 0 || nr_r === 0 || nr_r * metri_rochii < 0 || metri_rochii == 0) {
+        if (p1 < 1 || p2 < 1 || p3 <= 0 || p4 < 1 || p5 < 1 || p6 <= 0 || nr_r === 0 + 1|| nr_r * metri_rochii < 0 || metri_rochii == 0)
+        {
             rezultat = "input invalid";
         }
         else {
@@ -74,10 +75,5 @@ class Ex1{
     
 }
 
-
-window.Ex1 = Ex1;
-
-const ex1 = new Ex1();
-
-ex1.butoane();
+module.exports = Ex1;
  
