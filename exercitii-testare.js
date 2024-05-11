@@ -31,6 +31,17 @@ class Ex1{
 
         let rasp_corect = this.rezolvare(inp1, inp2, inp3, inp4, inp5, inp6);
      
+        if(Ex1.rezultat_corect3 < 0) {
+            Ex1.rezultat_corect3 = rasp_corect;
+            Ex1.rezultat_corect2 = rasp_corect;
+            Ex1.rezultat_corect1 = rasp_corect;
+        }
+        else {
+            Ex1.rezultat_corect3 = Ex1.rezultat_corect2;
+            Ex1.rezultat_corect2 = Ex1.rezultat_corect1;
+            Ex1.rezultat_corect1 = rasp_corect;
+        }
+
         if (param === rasp_corect) {
             alert("Raspuns corect!");
         }
@@ -38,6 +49,21 @@ class Ex1{
             alert("Date invalide! Recititi restrictiile.");
         }
         else {
+            if ((Ex1.rezultat_corect1 === Ex1.rezultat_corect2 && Ex1.rezultat_corect2 === Ex1.rezultat_corect3) || (Ex1.rezultat_corect2 === Ex1.rezultat_corect1))
+                {
+                    Ex1.count++;
+                    console.log(Ex1.count);
+                }
+            else {
+                Ex1.count = 1;
+                console.log(Ex1.count);
+            }
+
+            if(Ex1.count > 3) {
+                alert('Ati depasit numarul maxim de incercari. Rezultatul corect este ' + rasp_corect);
+                return [inp1, inp2, inp3, inp4, inp5, inp6];
+            }
+
             alert("Raspuns gresit! Mai incearca :)");
         }
      

@@ -3,6 +3,11 @@ class Ex1{
         console.log('ex1');
     }
 
+    static count = 0;
+    static rezultat_corect1 = -100000;
+    static rezultat_corect2 = -100000;
+    static rezultat_corect3 = -100000;
+
     rezolvare(p1, p2, p3, p4, p5, p6) {
         var nr_r1 = p2*p4
         var nr_r2 = p5*p1
@@ -29,19 +34,45 @@ class Ex1{
         let inp6 = parseFloat(document.getElementById("nr-metri2").value);
 
         let rasp_corect = this.rezolvare(inp1, inp2, inp3, inp4, inp5, inp6);
+        
+/*1*/       if(Ex1.rezultat_corect3 < 0) {
+/*2*/           Ex1.rezultat_corect3 = rasp_corect;
+/*3*/            Ex1.rezultat_corect2 = rasp_corect;
+/*4*/            Ex1.rezultat_corect1 = rasp_corect;
+            }
+/*5*/       else {
+/*6*/            Ex1.rezultat_corect3 = Ex1.rezultat_corect2;
+/*7*/            Ex1.rezultat_corect2 = Ex1.rezultat_corect1;
+/*8*/            Ex1.rezultat_corect1 = rasp_corect;
+            }
+
+/*9*/       if (param === rasp_corect) {
+/*10*/          alert("Raspuns corect!");
+            }
+/*11*/      else if (param === "input invalid") {
+/*12*/          alert("Date invalide! Recititi restrictiile.");
+            }
+/*13*/      else {
+/*14*/       if ((Ex1.rezultat_corect1 === Ex1.rezultat_corect2 && Ex1.rezultat_corect2 === Ex1.rezultat_corect3) || (Ex1.rezultat_corect2 === Ex1.rezultat_corect1))
+            {
+/*15*/               Ex1.count++;
+/*16*/               console.log(Ex1.count);
+            }
+/*17*/       else {
+/*18*/           Ex1.count = 1;
+/*19*/           console.log(Ex1.count);
+            }
+
+/*20*/       if(Ex1.count > 3) {
+/*21*/          alert('Ati depasit numarul maxim de incercari. Rezultatul corect este ' + rasp_corect);
+/*22*/          return [inp1, inp2, inp3, inp4, inp5, inp6];
+            }
+
+/*23*/       alert("Raspuns gresit! Mai incearca :)");
+        }
      
-        if (param === rasp_corect) {
-            alert("Raspuns corect!");
-        }
-        else if (param === "input invalid") {
-            alert("Date invalide! Recititi restrictiile.");
-        }
-        else {
-            alert("Raspuns gresit! Mai incearca :)");
-        }
-     
-        return [inp1, inp2, inp3, inp4, inp5, inp6];
-    }
+/*24*/ return [inp1, inp2, inp3, inp4, inp5, inp6];
+}
 
     butoane() {
         const btn_trimite = document.getElementById("trimite");
