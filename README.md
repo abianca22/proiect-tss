@@ -3,6 +3,8 @@ Membri: Andrei Bianca-Filofteia (332), Pana Alexandra-Ioana (312), Vlad Mariana-
 
 Link documentație: https://docs.google.com/document/d/1t2jydjNFFWjuPbwqQonLoCwAbEiPq8Pl4s-SjBlAp3A/edit?usp=sharing
 
+Link raport ChatGPT: https://docs.google.com/document/d/1JBFwh1HZeum-TlzhS-ku2aLG6hQ0uhR99m1EIZpyJhY/edit
+
 Link diagramă pentru testarea structurală (funcția "rezolvare"): https://drive.google.com/file/d/1wFk800pycoFHDqJP9ZaYDRYeTjt0mJiA/view?usp=drive_link
 
 Link diagramă pentru testarea structurală (funcția "verificare"): https://drive.google.com/file/d/1zwTEUNg5NmHwJypyxEeHW0xM8yH8I_63/view?usp=sharing
