@@ -4,7 +4,9 @@ Membri: Andrei Bianca-Filofteia (332), Pana Alexandra-Ioana (312), Vlad Mariana-
 Link documentație: https://docs.google.com/document/d/1mHOQm__K4JequHc-Vwv_L9mDjTenYsXZ3PiQakQGLdk/edit
 
 Link diagramă pentru testarea structurală (funcția "rezolvare"): https://drive.google.com/file/d/1wFk800pycoFHDqJP9ZaYDRYeTjt0mJiA/view?usp=drive_link
+
 Link diagramă pentru testarea structurală (funcția "verificare"): https://drive.google.com/file/d/1zwTEUNg5NmHwJypyxEeHW0xM8yH8I_63/view?usp=sharing
+
 Link diagramă pentru testare structurată generată cu code2flow: https://drive.google.com/file/d/1OAN0hKGGGtr5v4H86pApEmq86AG81aqh/view?usp=sharing
 
 Link diagramă cauză-efect: https://drive.google.com/file/d/1PjuuZ8QYWhWy01oUkdiFdmvQ-qTVb2jB/view?usp=sharing
