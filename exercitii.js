@@ -30,8 +30,8 @@ class Ex1{
         
 /*1*/       if(Ex1.rezultat_corect3 < 0) {
 /*2*/           Ex1.rezultat_corect3 = rasp_corect;
-/*3*/            Ex1.rezultat_corect2 = rasp_corect;
-/*4*/            Ex1.rezultat_corect1 = rasp_corect;
+/*3*/           Ex1.rezultat_corect2 = rasp_corect;
+/*4*/           Ex1.rezultat_corect1 = rasp_corect;
             }
 /*5*/       else {
 /*6*/            Ex1.rezultat_corect3 = Ex1.rezultat_corect2;

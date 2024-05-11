@@ -13,6 +13,7 @@ class Ex1{
         if (p1 < 1 || p2 < 1 || p3 <= 0 || p4 < 1 || p5 < 1 || p6 <= 0 || nr_r === 0 || nr_r * metri_rochii < 0 || metri_rochii == 0)
         {
             rezultat = "input invalid";
+
         }
         else {
             var rezultat=parseFloat((metri_rochii/nr_r).toFixed(2));
@@ -38,7 +39,7 @@ class Ex1{
         if (param === rasp_corect) {
             return "Raspuns corect!";
         }
-        else if (param === "input invalid") {
+        else if (rasp_corect === "input invalid") {
             return "Date invalide! Recititi restrictiile.";
         }
         else {
@@ -47,7 +48,8 @@ class Ex1{
                     Ex1.count++;
                 }
             else {
-                Ex1.count = 1;
+                if(Ex1.count !== 1)
+                    Ex1.count = 1;
             }
 
             if(Ex1.count > 3) {

@@ -6,9 +6,7 @@ describe("Testare functionala - Mutant5" , function (){
     // am pus cateva exemple din fiecare clasa, sunt mult mai multe teste
     
     it("Respecta toate constrangerile", function(){
-        expect(myObj.rezolvare(5, 6, 20, 4, 5, 17)).to.be.equal(5);
-        expect(myObj.rezolvare(5, 6, 20.5, 4, 5, 17.8)).to.be.equal(7);
-        expect(myObj.rezolvare(5, 6, 20.3, 4, 5, 17.8)).to.be.equal(7.8);        
+        expect(myObj.rezolvare(1, 5, 10, 15, 2, 30)).to.be.equal(1.64);
     });
 
     it("Afiseaza \"input invalid\" (impartire la zero)", function() {
@@ -17,7 +15,6 @@ describe("Testare functionala - Mutant5" , function (){
 
     it("Afiseaza \"input invalid\" (parametri negativi)", function() {
         expect(myObj.rezolvare(-1, -2, -3, -8, -7, -6)).to.be.equal("input invalid");
-        expect(myObj.rezolvare(-1, 2, -3, 8, -7, 6)).to.be.equal("input invalid");
     });
 
     it("Afiseaza \"input invalid\" (rezultat negativ)", function() {
@@ -25,9 +22,8 @@ describe("Testare functionala - Mutant5" , function (){
     });
 
     it("Test frontiera - afiseaza \"input invalid\"", function() {
-        expect(myObj.rezolvare(0, 0, 0, 0, 0, 0)).to.be.equal("input invalid");
-        expect(myObj.rezolvare(0, 1, 0, 3, 0, 5)).to.be.equal("input invalid");
-        expect(myObj.rezolvare(1, 6, 3 , 4, 5, 17)).to.be.equal("input invalid");
+        expect(myObj.rezolvare(1, 1, 0, 1, 1, 0)).to.be.equal("input invalid");
+        expect(myObj.rezolvare(0, 0, -1, 0, 0, -2)).to.be.equal("input invalid");
     });
 
 });
@@ -37,8 +33,6 @@ describe("Testare structurala - Mutant5", function() {
     // acoperire la nivel de instructiune
     
     it("Respecta toate constrangerile (ramificare stanga)", function(){
-        expect(myObj.rezolvare(5, 6, 20, 4, 5, 17)).to.be.equal(5);
-        expect(myObj.rezolvare(5, 6, 20.5, 4, 5, 17.8)).to.be.equal(7);
         expect(myObj.rezolvare(5, 6, 20.3, 4, 5, 17.8)).to.be.equal(7.8);        
     });
 

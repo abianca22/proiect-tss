@@ -1,4 +1,4 @@
-class Ex1{
+class Ex1 {
     constructor(){
         console.log('ex1');
     }
