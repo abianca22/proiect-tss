@@ -81,5 +81,9 @@ describe("Testare structurala", function() {
         expect(myObj.rezolvare(4, 6, 10, 6, 3, 15)).to.be.equal("input invalid");
         expect(myObj.rezolvare(8, 12, 20, 12, 20, 34)).to.be.equal(2);
     });
+
+    it.only("kvdmdvkl", function() {
+        expect(myObj.verificare(5, 6, 20, 4, 5, 17, 5)).to.be.equal("Raspuns corect!");
+    });
 });
 

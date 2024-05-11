@@ -25,14 +25,7 @@ class Ex1{
     }
 
 
-    verificare(param) {
-        let inp1 = parseInt(document.getElementById("nr-bluze1").value);
-        let inp2 = parseInt(document.getElementById("nr-rochii1").value);
-        let inp3 = parseFloat(document.getElementById("nr-metri1").value);
-        let inp4 = parseInt(document.getElementById("nr-bluze2").value);
-        let inp5 = parseInt(document.getElementById("nr-rochii2").value);
-        let inp6 = parseFloat(document.getElementById("nr-metri2").value);
-
+    verificare(inp1, inp2, inp3, inp4, inp5, inp6, param) {
         let rasp_corect = this.rezolvare(inp1, inp2, inp3, inp4, inp5, inp6);
         
 /*1*/       if(Ex1.rezultat_corect3 < 0) {
@@ -47,31 +40,27 @@ class Ex1{
             }
 
 /*9*/       if (param === rasp_corect) {
-/*10*/          alert("Raspuns corect!");
+/*10*/          return "Raspuns corect!";
             }
 /*11*/      else if (param === "input invalid") {
-/*12*/          alert("Date invalide! Recititi restrictiile.");
+/*12*/          return "Date invalide! Recititi restrictiile.";
             }
 /*13*/      else {
 /*14*/       if ((Ex1.rezultat_corect1 === Ex1.rezultat_corect2 && Ex1.rezultat_corect2 === Ex1.rezultat_corect3) || (Ex1.rezultat_corect2 === Ex1.rezultat_corect1))
             {
 /*15*/               Ex1.count++;
-/*16*/               console.log(Ex1.count);
             }
-/*17*/       else {
-/*18*/           Ex1.count = 1;
-/*19*/           console.log(Ex1.count);
-            }
-
-/*20*/       if(Ex1.count > 3) {
-/*21*/          alert('Ati depasit numarul maxim de incercari. Rezultatul corect este ' + rasp_corect);
-/*22*/          return [inp1, inp2, inp3, inp4, inp5, inp6];
+/*16*/       else {
+/*17*/                 if (Ex1.count !== 1)                
+/*18*/                   Ex1.count = 1;
             }
 
-/*23*/       alert("Raspuns gresit! Mai incearca :)");
+/*19*/       if(Ex1.count > 3) {
+/*20*/          return 'Ati depasit numarul maxim de incercari. Rezultatul corect este ' + rasp_corect;
+            }
+
+/*21*/       return "Raspuns gresit! Mai incearca :)";
         }
-     
-/*24*/ return [inp1, inp2, inp3, inp4, inp5, inp6];
 }
 
     butoane() {
@@ -81,14 +70,28 @@ class Ex1{
         let inputuri;
         
         btn_trimite.addEventListener("click", function() {
+            let inp1 = parseInt(document.getElementById("nr-bluze1").value);
+            let inp2 = parseInt(document.getElementById("nr-rochii1").value);
+            let inp3 = parseFloat(document.getElementById("nr-metri1").value);
+            let inp4 = parseInt(document.getElementById("nr-bluze2").value);
+            let inp5 = parseInt(document.getElementById("nr-rochii2").value);
+            let inp6 = parseFloat(document.getElementById("nr-metri2").value);
+    
             let inp7 = parseFloat(document.getElementById("rasp-pb1").value);
             const exercitiu = new Ex1();
-            inputuri = exercitiu.verificare(inp7);
+            alert(exercitiu.verificare(inp1, inp2, inp3, inp4, inp5, inp6, inp7));
         });
         
         btn_rasp.addEventListener("click", function() {
+            let inp1 = parseInt(document.getElementById("nr-bluze1").value);
+            let inp2 = parseInt(document.getElementById("nr-rochii1").value);
+            let inp3 = parseFloat(document.getElementById("nr-metri1").value);
+            let inp4 = parseInt(document.getElementById("nr-bluze2").value);
+            let inp5 = parseInt(document.getElementById("nr-rochii2").value);
+            let inp6 = parseFloat(document.getElementById("nr-metri2").value);
+    
             const exercitiu = new Ex1();
-            let rasp_corect = exercitiu.rezolvare(inputuri[0], inputuri[1], inputuri[2], inputuri[3], inputuri[4], inputuri[5]);
+            let rasp_corect = exercitiu.rezolvare(inp1, inp2, inp3, inp4, inp5, inp6);
             alert(`Raspunsul corect este ${rasp_corect}`);
         });
         
