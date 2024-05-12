@@ -42,7 +42,7 @@ class Ex1{
 /*9*/       if (param === rasp_corect) {
 /*10*/          return "Raspuns corect!";
             }
-/*11*/      else if (param === "input invalid") {
+/*11*/      else if (rasp_corect === "input invalid") {
 /*12*/          return "Date invalide! Recititi restrictiile.";
             }
 /*13*/      else {
