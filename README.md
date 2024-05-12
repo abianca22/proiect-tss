@@ -12,3 +12,5 @@ Link diagramă pentru testarea structurală (funcția "verificare"): https://dri
 Link diagramă pentru testare structurată generată cu code2flow: https://drive.google.com/file/d/1OAN0hKGGGtr5v4H86pApEmq86AG81aqh/view?usp=sharing
 
 Link diagramă cauză-efect: https://drive.google.com/file/d/1PjuuZ8QYWhWy01oUkdiFdmvQ-qTVb2jB/view?usp=sharing
+
+Link demo: https://youtu.be/pUh58PXjfvw
