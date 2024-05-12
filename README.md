@@ -1,7 +1,9 @@
 # Proiect la Testarea Sistemelor Software - Testare unitară în JavaScript 
 Membri: Andrei Bianca-Filofteia (332), Pana Alexandra-Ioana (312), Vlad Mariana-Cristina (312)
 
-Link documentație: https://docs.google.com/document/d/1mHOQm__K4JequHc-Vwv_L9mDjTenYsXZ3PiQakQGLdk/edit
+Link documentație: https://docs.google.com/document/d/1t2jydjNFFWjuPbwqQonLoCwAbEiPq8Pl4s-SjBlAp3A/edit?usp=sharing
+
+Link raport ChatGPT: https://docs.google.com/document/d/1JBFwh1HZeum-TlzhS-ku2aLG6hQ0uhR99m1EIZpyJhY/edit
 
 Link diagramă pentru testarea structurală (funcția "rezolvare"): https://drive.google.com/file/d/1wFk800pycoFHDqJP9ZaYDRYeTjt0mJiA/view?usp=drive_link
 
